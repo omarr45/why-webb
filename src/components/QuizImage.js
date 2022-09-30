@@ -26,7 +26,14 @@ function QuizImage(props) {
   return (
     <>
       {confetti ? (
-        <Confetti width={0.95 * window.innerWidth} height={0.95 * window.innerHeight} tweenDuration={1500} recycle={false} gravity={1} />
+        <Confetti
+          width={0.98 * window.innerWidth}
+          height={0.98 * window.innerHeight}
+          colors={['#ffce00', '#003099', '#802020']}
+          tweenDuration={1500}
+          recycle={false}
+          gravity={1}
+        />
       ) : null}
       <img
         className='w-96 h-96 object-cover cursor-pointer border-white border-4 hover:border-primary-500'
