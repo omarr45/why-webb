@@ -8,8 +8,11 @@ const Games = () => {
         <Link
           to='/game-1'
           className='flex flex-col bg-blue-900 items-center justify-center rounded-xl overflow-hidden p-3'>
-          <img src='https://dummyimage.com/540x360/fff/aaa' alt='Game 1' />
-          <h2 className='mt-3 font-bold text-2xl'>Game 1</h2>
+          <img
+            src='https://res.cloudinary.com/omar45/image/upload/v1664559385/why-webb/Prev1.jpg'
+            alt="Which one is JWST's?"
+          />
+          <h2 className='mt-3 font-bold text-2xl'>Which one is JWST's?</h2>
         </Link>
         <Link
           to='/game-2a'
