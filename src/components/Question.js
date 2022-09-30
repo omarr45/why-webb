@@ -1,5 +1,5 @@
-import React from 'react';
 import QuizImage from './QuizImage';
+import React from 'react';
 
 function Question(props) {
   const shuffled = [
@@ -14,12 +14,12 @@ function Question(props) {
       click={() => props.click(0)}
       alt={props.loc}
       src={props.hubble}
-			wrong
+      wrong
     />,
   ].sort(() => Math.random() - 0.5);
 
   return (
-    <div className='flex gap-10'>{shuffled}</div>
+    <div className='flex gap-10 items-center justify-center'>{shuffled}</div>
   );
 }
 

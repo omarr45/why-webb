@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import Question from '../components/Question';
 
 const Game01 = () => {
@@ -47,18 +48,37 @@ const Game01 = () => {
   const isFinished = currentQuestion >= questions.length;
 
   return (
-    <div className='max-w-7xl mx-auto text-center py-24'>
+    <div className='max-w-7xl mx-auto text-center pt-16'>
       {isFinished ? (
         <>
-          <p className='text-4xl'>Game Over</p>
-          <p className='text-3xl'>
-            You scored {score} out of {questions.length}
-          </p>
+          <div className='font-bold text-3xl my-10'>
+            <img
+              className='w-44 mx-auto'
+              src='https://res.cloudinary.com/omar45/image/upload/h_800/v1664558412/why-webb/astro-guy.png'
+              alt='Astro dab'
+            />
+            <p className='my-4'>You Scored</p>
+            <div className='flex items-center justify-center mx-auto'>
+              {questions.map((q, i) => (
+                <span key={i}>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='35'
+                    height='35'
+                    fill={i < score ? '#f5c400' : 'currentColor'}
+                    class='bi bi-hexagon'
+                    viewBox='0 0 16 16'>
+                    <path d='M14 4.577v6.846L8 15l-6-3.577V4.577L8 1l6 3.577zM8.5.134a1 1 0 0 0-1 0l-6 3.577a1 1 0 0 0-.5.866v6.846a1 1 0 0 0 .5.866l6 3.577a1 1 0 0 0 1 0l6-3.577a1 1 0 0 0 .5-.866V4.577a1 1 0 0 0-.5-.866L8.5.134z' />
+                  </svg>
+                </span>
+              ))}
+            </div>
+          </div>
         </>
       ) : (
         <>
-          <p className='mb-10 text-4xl'>Guess which is the webb image</p>
-          <Question click={answerHandler} {...questions[currentQuestion]} />;
+          <h2 className='font-bold text-3xl mb-5'>Which one is JWST's?</h2>
+          <Question click={answerHandler} {...questions[currentQuestion]} />
         </>
       )}
     </div>

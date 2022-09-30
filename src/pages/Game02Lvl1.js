@@ -30,8 +30,8 @@ const Game02Lvl1 = () => {
   }, [img1, img2, score]);
 
   return (
-    <div className='max-w-7xl mx-auto text-center py-14'>
-      <div className='flex justify-between items-center max-w-4xl  mb-8 mx-auto'>
+    <div className='max-w-4xl mx-auto text-center py-14'>
+      <div className='flex justify-between items-center mb-8 mx-auto'>
         <Link
           to='/game-2a'
           className='cursor-not-allowed text-gray-600 border-2 border-gray-700 rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-black font-semibold'>
@@ -43,9 +43,9 @@ const Game02Lvl1 = () => {
             viewBox='0 0 20 20'
             xmlns='http://www.w3.org/2000/svg'>
             <path
-              fill-rule='evenodd'
+              fillRule='evenodd'
               d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
-              clip-rule='evenodd'></path>
+              clipRule='evenodd'></path>
           </svg>
           Previous Level
         </Link>
@@ -62,9 +62,9 @@ const Game02Lvl1 = () => {
             viewBox='0 0 20 20'
             xmlns='http://www.w3.org/2000/svg'>
             <path
-              fill-rule='evenodd'
+              fillRule='evenodd'
               d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
-              clip-rule='evenodd'></path>
+              clipRule='evenodd'></path>
           </svg>
         </Link>
       </div>
@@ -127,6 +127,25 @@ const Game02Lvl1 = () => {
           />
         </div>
       </div>
+      <section className='mt-7 bg-opacity-20 rounded-lg bg-primary-600 flex flex-col gap-1 p-3'>
+        <div className='line'>
+          <bdi className='font-semibold'>In the photo: </bdi>Webb Mirror
+          Alignment
+        </div>
+        <div className='line'>
+          <bdi className='font-semibold'>Captured with: </bdi>NIRCam instrument
+        </div>
+        <div className='line'>
+          <bdi className='font-semibold'>Read more: </bdi>
+          <a
+            href='https://blogs.nasa.gov/webb/2022/02/25/webb-mirror-alignment-continues-successfully/'
+            target='_blank'
+            rel='noreferrer'
+            className='text-primary-500 hover:underline underline-offset-2'>
+            NASA Blogs
+          </a>
+        </div>
+      </section>
     </div>
   );
 };

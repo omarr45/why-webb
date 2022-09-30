@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Game02 = () => {
   const IMG_PATH =
-    'https://res.cloudinary.com/omar45/image/upload/h_800,w_800/v1664543541/why-webb/Jupiter-jwst.jpg';
+    'https://res.cloudinary.com/omar45/image/upload/h_800,w_800/v1664555276/why-webb/jupyter-standalone.jpg';
 
   const [img1, setImg1] = useState(Math.floor(Math.random() * 10));
   const [img2, setImg2] = useState(Math.floor(Math.random() * 10));
@@ -70,8 +70,8 @@ const Game02 = () => {
   ]);
 
   return (
-    <div className='max-w-7xl mx-auto text-center py-14'>
-      <div className='flex justify-between items-center max-w-4xl  mb-8 mx-auto'>
+    <div className='max-w-4xl mx-auto text-center py-14'>
+      <div className='flex justify-between items-center mb-8 mx-auto'>
         <Link
           to='/game-2'
           className='text-gray-800 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-primary-600 hover:bg-primary-700 focus:ring-primary-800'>
@@ -83,9 +83,9 @@ const Game02 = () => {
             viewBox='0 0 20 20'
             xmlns='http://www.w3.org/2000/svg'>
             <path
-              fill-rule='evenodd'
+              fillRule='evenodd'
               d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
-              clip-rule='evenodd'></path>
+              clipRule='evenodd'></path>
           </svg>
           Previous Level
         </Link>
@@ -102,9 +102,9 @@ const Game02 = () => {
             viewBox='0 0 20 20'
             xmlns='http://www.w3.org/2000/svg'>
             <path
-              fill-rule='evenodd'
+              fillRule='evenodd'
               d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
-              clip-rule='evenodd'></path>
+              clipRule='evenodd'></path>
           </svg>
         </Link>
       </div>
@@ -273,6 +273,24 @@ const Game02 = () => {
           />
         </div>
       </div>
+      <section className='mt-7 bg-opacity-20 rounded-lg bg-primary-600 flex flex-col gap-1 p-3'>
+        <div className='line'>
+          <bdi className='font-semibold'>In the photo: </bdi>Jupiter's Auroras
+        </div>
+        <div className='line'>
+          <bdi className='font-semibold'>Captured with: </bdi>NIRCam instrument
+        </div>
+        <div className='line'>
+          <bdi className='font-semibold'>Read more: </bdi>
+          <a
+            href='https://blogs.nasa.gov/webb/2022/08/22/webbs-jupiter-images-showcase-auroras-hazes/'
+            target='_blank'
+            rel='noreferrer'
+            className='text-primary-500 hover:underline underline-offset-2'>
+            NASA Blogs
+          </a>
+        </div>
+      </section>
     </div>
   );
 };

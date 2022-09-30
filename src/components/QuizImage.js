@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import Confetti from 'react-confetti';
 
 function QuizImage(props) {
@@ -17,15 +18,17 @@ function QuizImage(props) {
       setTimeout(() => {
         setConfetti(false);
         props.click();
-      }, 1800)
+      }, 1800);
     }
   };
 
   return (
     <>
-      {confetti ? <Confetti tweenDuration={1500} recycle={false} gravity={1}/> : null}
+      {confetti ? (
+        <Confetti tweenDuration={1500} recycle={false} gravity={1} />
+      ) : null}
       <img
-        className='w-full cursor-pointer border-white border-4 hover:border-yellow-300'
+        className='w-96 h-96 object-cover cursor-pointer border-white border-4 hover:border-yellow-300'
         onClick={animate}
         alt={props.alt}
         src={props.src}
