@@ -28,7 +28,7 @@ function QuizImage(props) {
         <Confetti tweenDuration={1500} recycle={false} gravity={1} />
       ) : null}
       <img
-        className='w-96 h-96 object-cover cursor-pointer border-white border-4 hover:border-yellow-300'
+        className='w-96 h-96 object-cover cursor-pointer border-white border-4 hover:border-primary-500'
         onClick={animate}
         alt={props.alt}
         src={props.src}
