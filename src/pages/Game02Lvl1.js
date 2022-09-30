@@ -30,8 +30,8 @@ const Game02Lvl1 = () => {
   }, [img1, img2, score]);
 
   return (
-    <div className='max-w-4xl mx-auto text-center py-14'>
-      <div className='flex justify-between items-center mb-8 mx-auto'>
+    <div className='max-w-4xl mx-auto text-center py-14 px-4'>
+      <div className='flex flex-col md:flex-row gap-4 justify-between items-center mb-8 mx-auto'>
         <Link
           to='/game-2a'
           className='cursor-not-allowed text-gray-600 border-2 border-gray-700 rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-black font-semibold'>
@@ -68,7 +68,7 @@ const Game02Lvl1 = () => {
           </svg>
         </Link>
       </div>
-      <div className='game-wrapper flex items-center justify-center gap-16'>
+      <div className='game-wrapper flex flex-col md:flex-row items-center justify-center gap-16'>
         {/* Sliders */}
         <div className='sliders flex flex-col gap-6 w-44'>
           <div className='slider'>
@@ -107,21 +107,21 @@ const Game02Lvl1 = () => {
         {/* Images Wrapper */}
         <div className='imgs-wrapper relative top-0 left-0 p-5 rounded border-4 border-primary-500'>
           <img
-            className={`h-96 mix-blend-lighten absolute`}
+            className={`h-56 md:h-96 mix-blend-lighten absolute`}
             ref={imag1Ref}
             style={{ left: `${8 + img1 * 4}px` }}
             src={IMG_PATH}
             alt='Jpyter photographed by JWST'
           />
           <img
-            className={`h-96 mix-blend-lighten absolute`}
+            className={`h-56 md:h-96 mix-blend-lighten absolute`}
             ref={imag2Ref}
             style={{ top: `${-4 + img2 * 4}px` }}
             src={IMG_PATH}
             alt='Jpyter photographed by JWST'
           />
           <img
-            className='h-96 mix-blend-lighten'
+            className='h-56 md:h-96 mix-blend-lighten'
             src={IMG_PATH}
             alt='Jpyter photographed by JWST'
           />

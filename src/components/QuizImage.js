@@ -36,7 +36,7 @@ function QuizImage(props) {
         />
       ) : null}
       <img
-        className='w-96 h-96 object-cover cursor-pointer border-white border-4 hover:border-primary-500'
+        className='h-56 md:h-96 w-56 md:w-96 object-cover cursor-pointer border-white border-4 hover:border-primary-500'
         onClick={animate}
         alt={props.alt}
         src={props.src}

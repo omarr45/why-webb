@@ -70,8 +70,8 @@ const Game02 = () => {
   ]);
 
   return (
-    <div className='max-w-4xl mx-auto text-center py-14'>
-      <div className='flex justify-between items-center mb-8 mx-auto'>
+    <div className='max-w-4xl mx-auto text-center py-14 px-4'>
+      <div className='flex flex-col md:flex-row gap-4 justify-between items-center mb-8 mx-auto'>
         <Link
           to='/game-2'
           className='text-gray-800 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-primary-600 hover:bg-primary-700 focus:ring-primary-800'>
@@ -108,7 +108,7 @@ const Game02 = () => {
           </svg>
         </Link>
       </div>
-      <div className='game-wrapper flex items-center justify-center gap-16'>
+      <div className='game-wrapper flex flex-col md:flex-row items-center justify-center gap-16'>
         {/* Sliders */}
         <div className='sliders flex flex-col gap-6 w-44'>
           <div className='slider'>
@@ -239,35 +239,35 @@ const Game02 = () => {
         {/* Images Wrapper */}
         <div className='imgs-wrapper relative top-0 left-0 p-5 rounded border-4 border-primary-500'>
           <img
-            className={`h-96 mix-blend-lighten absolute`}
+            className={`h-56 md:h-96 mix-blend-lighten absolute`}
             ref={imag1Ref}
             style={{ left: `${8 + img1 * 4}px`, top: `${0 + img1Opp * 4}px` }}
             src={IMG_PATH}
             alt='Jpyter photographed by JWST'
           />
           <img
-            className={`h-96 mix-blend-lighten absolute`}
+            className={`h-56 md:h-96 mix-blend-lighten absolute`}
             ref={imag2Ref}
             style={{ left: `${-8 + img2 * 4}px`, top: `${8 + img2Opp * 4}px` }}
             src={IMG_PATH}
             alt='Jpyter photographed by JWST'
           />
           <img
-            className={`h-96 mix-blend-lighten absolute`}
+            className={`h-56 md:h-96 mix-blend-lighten absolute`}
             ref={imag3Ref}
             style={{ left: `${4 + img3 * 4}px`, top: `${-8 + img3Opp * 4}px` }}
             src={IMG_PATH}
             alt='Jpyter photographed by JWST'
           />
           <img
-            className={`h-96 mix-blend-lighten absolute`}
+            className={`h-56 md:h-96 mix-blend-lighten absolute`}
             ref={imag4Ref}
             style={{ left: `${0 + img4 * 4}px`, top: `${4 + img4Opp * 4}px` }}
             src={IMG_PATH}
             alt='Jpyter photographed by JWST'
           />
           <img
-            className='h-96 mix-blend-lighten'
+            className='h-56 md:h-96 mix-blend-lighten'
             src={IMG_PATH}
             alt='Jpyter photographed by JWST'
           />

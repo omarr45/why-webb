@@ -22,4 +22,11 @@ module.exports = {
     },
   },
   plugins: [require('flowbite/plugin')],
+  variants: {
+    extend: {
+      display: ['group-focus'],
+      opacity: ['group-focus'],
+      inset: ['group-focus'],
+    },
+  },
 };

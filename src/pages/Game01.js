@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import Backdrop from '../components/Backdrop';
 import Question from '../components/Question';
 
@@ -52,7 +53,7 @@ const Game01 = () => {
   return (
     <>
       <Backdrop show={backdrop} />
-      <div className='max-w-7xl mx-auto text-center pt-16'>
+      <div className='max-w-4xl mx-auto text-center pt-8 md:pt-16'>
         {isFinished ? (
           <>
             <div className='font-bold text-3xl my-10'>
@@ -81,7 +82,9 @@ const Game01 = () => {
           </>
         ) : (
           <>
-            <h2 className='font-bold text-3xl mb-5'>Which one is JWST's?</h2>
+            <h2 className='font-bold text-3xl mb-8 md:mb-5'>
+              Which one is JWST's?
+            </h2>
             <Question
               disableGame={setBackdrop}
               click={answerHandler}
