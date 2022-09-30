@@ -36,8 +36,8 @@ const Game02 = () => {
   }, [img1, img2, img3, img4, score]);
 
   return (
-    <div className='max-w-4xl mx-auto text-center pt-14 p-4'>
-      <div className='flex flex-col gap-4 md:flex-row justify-between items-center mb-8 mx-auto'>
+    <div className='max-w-4xl mx-auto text-center pt-6 md:pt-10 p-4'>
+      <div className='flex flex-col p-3 gap-4 md:flex-row justify-between items-center mb-8 mx-auto'>
         <Link
           to='/game-2a'
           className='text-gray-800 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-primary-600 hover:bg-primary-700 focus:ring-primary-800'>
@@ -73,6 +73,42 @@ const Game02 = () => {
               clipRule='evenodd'></path>
           </svg>
         </Link>
+      </div>
+      <div
+        className='flex mx-5 text-sm md:text-base md:mx-4 p-4 md:p-6 text-gray-700 bg-gray-100 rounded-lg dark:bg-gray-700 dark:text-gray-300 mb-6 text-left'
+        role='alert'>
+        <svg
+          aria-hidden='true'
+          className='flex-shrink-0 inline w-5 h-5 mr-3'
+          fill='currentColor'
+          viewBox='0 0 20 20'
+          xmlns='http://www.w3.org/2000/svg'>
+          <path
+            fillRule='evenodd'
+            d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z'
+            clipRule='evenodd'></path>
+        </svg>
+        <span className='sr-only'>Info</span>
+        <div>
+          As we learned{' '}
+          <Link to={'/james-webb'} className='font-bold hover:underline'>
+            earlier
+          </Link>
+          , JWST's primary mirror consists of 18 hexagonal parts, each part acts
+          as a single telescope. So, they need to be aligned to act as one large
+          telescope, in order to catch more light and higher resolution images.
+          <p className='mt-3 md:mt-1'>
+            Can you help engineers at the{' '}
+            <a
+              href='https://www.nasa.gov/goddard'
+              target='_blank'
+              rel='noreferrer'
+              className='font-bold hover:underline'>
+              NASA Goddard Space Flight Center{' '}
+            </a>
+            align the mirrors?
+          </p>
+        </div>
       </div>
       <div className='game-wrapper flex flex-col md:flex-row items-center justify-center gap-16'>
         {/* Sliders */}
