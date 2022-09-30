@@ -12,10 +12,13 @@ const Games = () => {
           <h2 className='mt-3 font-bold text-2xl'>Game 1</h2>
         </Link>
         <Link
-          to='/game-2'
+          to='/game-2a'
           className='flex flex-col bg-blue-900 items-center justify-center rounded-xl overflow-hidden p-3'>
-          <img src='https://dummyimage.com/540x360/fff/aaa' alt='Game 1' />
-          <h2 className='mt-3 font-bold text-2xl'>Game 2</h2>
+          <img
+            src='https://res.cloudinary.com/omar45/image/upload/v1664551444/why-webb/Game2-prev.jpg'
+            alt='Align Mirrors'
+          />
+          <h2 className='mt-3 font-bold text-2xl'>Align Mirrors</h2>
         </Link>
         <Link
           to='/game-3'
