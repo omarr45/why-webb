@@ -1,38 +1,99 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* .container {
+  width: 100%;
+  max-width: 1000px;
   text-align: center;
-}
+  margin: 0 auto;
+} */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes bounce {
+  0% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.webb-image {
+  animation: bounce 4s ease-in-out infinite;
+  animation-direction: alternate;
+  rotate: 12deg;
+  width: 100%;
+  max-width: 600px;
+  clip-path: polygon(
+    56% 0,
+    90% 20%,
+    100% 60%,
+    100% 100%,
+    0 100%,
+    0% 60%,
+    10% 24%
+  );
 }
 
-.App-link {
-  color: #61dafb;
+.stars,
+.twinkling,
+.clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -20;
 }
 
-@keyframes App-logo-spin {
+@keyframes move-twink-back {
   from {
-    transform: rotate(0deg);
+    background-position: 0 0;
   }
   to {
-    transform: rotate(360deg);
+    background-position: -10000px 5000px;
   }
+}
+
+.stars {
+  background: #000
+    url('https://raw.githubusercontent.com/Carla-Codes/starry-night-css-animation/master/stars.png')
+    repeat top center;
+  z-index: -20;
+}
+
+.twinkling {
+  background: transparent
+    url('https://raw.githubusercontent.com/Carla-Codes/starry-night-css-animation/master/twinkling.png')
+    repeat top center;
+  z-index: -19;
+  animation: move-twink-back 200s linear infinite;
 }
