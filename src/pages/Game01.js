@@ -38,24 +38,27 @@ const Game01 = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const answerHandler = (isRight) => {
-    const updatedAnswer = score + isRight;
-    setScore(updatedAnswer);
+    const updatedScore = score + isRight;
+    setScore(updatedScore);
     if (currentQuestion < questions.length)
       setCurrentQuestion(currentQuestion + 1);
   };
-  const isFinished = currentQuestion < questions.length;
+
+  const isFinished = currentQuestion >= questions.length;
 
   return (
     <div className='max-w-7xl mx-auto text-center py-24'>
-      {(isFinished && (
+      {isFinished ? (
+        <>
+          <p className='text-4xl'>Game Over</p>
+          <p className='text-3xl'>
+            You scored {score} out of {questions.length}
+          </p>
+        </>
+      ) : (
         <>
           <p className='mb-10 text-4xl'>Guess which is the webb image</p>
           <Question click={answerHandler} {...questions[currentQuestion]} />;
-        </>
-      )) || (
-        <>
-          <p>Game Over</p>
-          <p>Total Score is: {score}</p>
         </>
       )}
     </div>

@@ -5,7 +5,7 @@ function Question(props) {
   const shuffled = [
     <QuizImage
       key='webb'
-      click={() => props.click(0)}
+      click={() => props.click(1)}
       alt={props.loc}
       src={props.webb}
     />,
