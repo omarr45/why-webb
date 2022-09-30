@@ -6,20 +6,17 @@ const Navbar2 = ({ p }) => {
       <ul className='flex h-20 gap-6 text-xl w-full items-center justify-center font-semibold'>
         <Link
           to={'/telescopes'}
-          className={`p-2 cursor-pointer border-b-2 hover:border-gray-300 hover:text-gray-300 transition-all
-            ${p === 'telescopes' ? 'border-gray-300' : 'border-transparent'}`}>
+          className='p-2 cursor-pointer border-b-2 border-transparent hover:border-gray-300 hover:text-gray-300 transition-all'>
           Telescopes
         </Link>
         <Link
           to={'james-webb'}
-          className={`p-2 cursor-pointer border-b-2 hover:border-gray-300 hover:text-gray-300 transition-all
-            ${p === 'james-webb' ? 'border-gray-300' : 'border-transparent'}`}>
+          className='p-2 cursor-pointer border-b-2 border-transparent hover:border-gray-300 hover:text-gray-300 transition-all'>
           James Webb
         </Link>
         <Link
-          to={'/'}
-          className={`p-2 cursor-pointer border-b-2 hover:border-gray-300 hover:text-gray-300 transition-all
-            ${p === 'game' ? 'border-gray-300' : 'border-transparent'}`}>
+          to={'/games'}
+          className='p-2 cursor-pointer border-b-2 border-transparent hover:border-gray-300 hover:text-gray-300 transition-all'>
           Let's Play
         </Link>
       </ul>

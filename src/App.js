@@ -4,7 +4,10 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 import Footer from './components/Footer';
-import Game from './pages/Game';
+import Game01 from './pages/Game01';
+import Game02 from './pages/Game02';
+import Game03 from './pages/Game03';
+import Games from './pages/Games';
 import JamesWebb from './pages/JamesWebb';
 import Navbar2 from './components/Navbar2';
 import Telescopes from './pages/Telescopes';
@@ -27,7 +30,10 @@ function App() {
           <Route path='/' element={<div>Home</div>} />
           <Route path='/telescopes' element={<Telescopes />} />
           <Route path='/james-webb' element={<JamesWebb />} />
-          <Route path='/game' element={<Game />} />
+          <Route path='/games' element={<Games />} />
+          <Route path='/game-1' element={<Game01 />} />
+          <Route path='/game-2' element={<Game02 />} />
+          <Route path='/game-3' element={<Game03 />} />
         </Routes>
         <Footer />
       </div>
