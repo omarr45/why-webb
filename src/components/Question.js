@@ -8,13 +8,15 @@ function Question(props) {
       click={() => props.click(1)}
       alt={props.loc}
       src={props.webb}
-    />,
-    <QuizImage
+			disableGame={props.disableGame}
+			/>,
+			<QuizImage
       key='hubble'
       click={() => props.click(0)}
       alt={props.loc}
       src={props.hubble}
-      wrong
+			disableGame={props.disableGame}
+			wrong
     />,
   ].sort(() => Math.random() - 0.5);
 
@@ -23,4 +25,4 @@ function Question(props) {
   );
 }
 
-export default Question;
+export default React.memo(Question, (prevProps, nextProps) => prevProps.loc === nextProps.loc);

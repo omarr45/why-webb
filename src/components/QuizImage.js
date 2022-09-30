@@ -7,6 +7,7 @@ function QuizImage(props) {
   const [confetti, setConfetti] = useState(false);
 
   const animate = () => {
+    props.disableGame(true);
     if (props.wrong) {
       setShake(true);
       setTimeout(() => {
