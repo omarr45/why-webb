@@ -23,12 +23,12 @@ const Games = () => {
           />
           <h2 className='mt-3 font-bold text-2xl'>Align Mirrors</h2>
         </Link>
-        <Link
+        {/* <Link
           to='/game-3'
           className='flex flex-col bg-blue-900 items-center justify-center rounded-xl overflow-hidden p-5 md:p-3 md:hover:scale-110 transition-transform shadow-xl'>
           <img src='https://dummyimage.com/540x360/fff/aaa' alt='Game 1' />
           <h2 className='mt-3 font-bold text-2xl'>Game 3</h2>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
