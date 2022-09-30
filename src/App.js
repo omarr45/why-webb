@@ -11,6 +11,7 @@ import Game02Lvl3 from './pages/Game02Lvl3';
 import Game03 from './pages/Game03';
 import Games from './pages/Games';
 import JamesWebb from './pages/JamesWebb';
+import Navbar from './components/Navbar';
 import Navbar2 from './components/Navbar2';
 import Telescopes from './pages/Telescopes';
 
@@ -27,7 +28,8 @@ function App() {
       <div className='App  min-h-screen text-white'>
         <div className='stars'></div>
         <div className='twinkling'></div>
-        <Navbar2 p={page} />
+        <Navbar />
+        {/* <Navbar2 /> */}
         <Routes>
           <Route path='/' element={<div>Home</div>} />
           <Route path='/telescopes' element={<Telescopes />} />

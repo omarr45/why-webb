@@ -1,64 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+  const Links = [
+    { name: 'Telescopes', link: '/telescopes' },
+    { name: 'James Webb', link: '/james-webb' },
+    { name: "Let's Play", link: '/games' },
+  ];
+  let [open, setOpen] = useState(false);
   return (
-    <nav className='bg-transparent border-gray-200 px-2 sm:px-4 py-2.5'>
-      <div className='container flex flex-wrap justify-between items-center mx-auto max-w-5xl'>
-        <a href='https://flowbite.com/' className='flex items-center'>
-          <img
-            src='https://flowbite.com/docs/images/logo.svg'
-            className='mr-3 h-6 sm:h-9'
-            alt='Flowbite Logo'
-          />
-          <span className='self-center text-xl font-semibold whitespace-nowrap dark:text-white'>
-            Why Webb
-          </span>
-        </a>
-        <button
-          data-collapse-toggle='navbar-default'
-          type='button'
-          className='inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
-          aria-controls='navbar-default'
-          aria-expanded='false'>
-          <span className='sr-only'>Open main menu</span>
-          <svg
-            className='w-6 h-6'
-            aria-hidden='true'
-            fill='currentColor'
-            viewBox='0 0 20 20'
-            xmlns='http://www.w3.org/2000/svg'>
-            <path
-              fillRule='evenodd'
-              d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z'
-              clipRule='evenodd'></path>
-          </svg>
-        </button>
-        <div className='hidden w-full md:block md:w-auto' id='navbar-default'>
-          <ul className='flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
-            <li>
-              <a
-                href='#'
-                className='block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>
-                Telescopes
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                className='block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>
-                James Webb
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                className='block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>
-                Let's Play
-              </a>
-            </li>
-          </ul>
-        </div>
+    <nav className='px-5 md:px-0 py-5 w-full max-w-4xl mx-auto flex items-center justify-between'>
+      <Link to='/james-webb' className='flex items-center justify-center gap-4'>
+        <img
+          className='h-16'
+          src='https://res.cloudinary.com/omar45/image/upload/v1664565392/why-webb/LOGO.png'
+          alt='WhyWebb Logo'
+        />
+        <h1 className='logo 4font-bold text-3xl'>Why Webb</h1>
+      </Link>
+
+      <div
+        onClick={() => setOpen(!open)}
+        className='text-3xl cursor-pointer md:hidden'>
+        <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
       </div>
+
+      <ul
+        className={`flex flex-col md:flex-row  gap-6 text-xl items-center pb-0 absolute md:static md:bg-transparent bg-black md:z-auto z-[40] left-0 w-full h-screen md:h-auto pt-20 md:pt-0 md:w-auto transition-all duration-300 ease-in ${
+          open ? 'top-24' : 'top-[-800px]'
+        }`}>
+        {Links.map((link) => (
+          <Link
+            onClick={() => setOpen(false)}
+            key={link.name}
+            to={link.link}
+            className='p-2 cursor-pointer border-b-2 border-transparent hover:border-gray-300 hover:text-gray-300 transition-all'>
+            {link.name}
+          </Link>
+        ))}
+      </ul>
     </nav>
   );
 };
