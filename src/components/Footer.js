@@ -13,7 +13,14 @@ const Footer = () => {
         <h1 className='logo 4font-bold text-3xl'>Why Webb</h1>
       </Link>
       <p className='text-gray-400'>
-        Open-source web application to discover James Webb's potentials
+        <a
+          className='hover:underline'
+          href='https://github.com/omarr45/why-webb'
+          target='_blank'
+          rel='noreferrer'>
+          Open-source
+        </a>{' '}
+        web application to discover James Webb's potentials
       </p>
       <ul className='flex flex-wrap gap-4 justify-center items-center text-gray-200 dark:text-white'>
         {/* <Link to={'/telescopes'}>Telescopes</Link>- */}
