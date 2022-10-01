@@ -14,7 +14,7 @@ const pieces = [
   {
     title: 'Primary Mirror',
     description:
-      "Consisting of 18 hexagonal segments, JWST's primary mirror is the largest and most complex optical element ever built with a final mirror of diameter 6.5 meters. (For scale, Hubble had just a 2.4 meters mirror)",
+      "Think about the light photons coming from stars as drops of rain, if you want to catch more of it, you have to use a larger bucket. That's why in JWST they used 18 hexagonal segments. JWST's primary mirror is the largest and most complex optical element ever built with a final mirror of diameter 6.5 meters. (For scale, Hubble had just a 2.4 meters mirror).",
     description2:
       'Each segment is 1.32 meters wide and weighs approximately 20 kg. The segments are made of beryllium, a lightweight, strong, and stiff material that is also transparent to infrared light. The mirror segments are coated with a thin layer of gold to reflect infrared light.',
     image: 'https://live.staticflickr.com/7330/26544925010_6bd8fc767d_z.jpg',
