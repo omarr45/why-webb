@@ -10,7 +10,7 @@ const Footer = () => {
         </p>
         <ul className='flex flex-wrap gap-4 justify-center items-center mb-6 text-gray-200 dark:text-white'>
           <Link to={'/telescopes'}>Telescopes</Link>
-          <Link to={'/james-webb'}>James Webb</Link>
+          <Link to={'/'}>James Webb</Link>
           <Link to={'/game'}>Game</Link>
           <Link to={'/about-us'}>About Us</Link>
         </ul>

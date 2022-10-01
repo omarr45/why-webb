@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const Links = [
     { name: 'Telescopes', link: '/telescopes' },
-    { name: 'James Webb', link: '/james-webb' },
+    { name: 'James Webb', link: '/' },
     { name: "Let's Play", link: '/games' },
   ];
   let [open, setOpen] = useState(false);
   return (
     <nav className='px-5 md:px-0 py-5 w-full max-w-4xl mx-auto flex items-center justify-between'>
-      <Link to='/james-webb' className='flex items-center justify-center gap-4'>
+      <Link to='/' className='flex items-center justify-center gap-4'>
         <img
           className='h-16'
           src='https://res.cloudinary.com/omar45/image/upload/v1664565392/why-webb/LOGO.png'

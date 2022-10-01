@@ -31,9 +31,8 @@ function App() {
         <Navbar />
         {/* <Navbar2 /> */}
         <Routes>
-          <Route path='/' element={<div>Home</div>} />
+          <Route path='/' element={<JamesWebb />} />
           <Route path='/telescopes' element={<Telescopes />} />
-          <Route path='/james-webb' element={<JamesWebb />} />
           <Route path='/games' element={<Games />} />
           <Route path='/game-1' element={<Game01 />} />
           <Route path='/game-2' element={<Game02 />} />
