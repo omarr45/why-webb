@@ -4,7 +4,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className='p-4 md:p-6 lg:p-8 mx-auto max-w-screen-xl text-center flex flex-col gap-3'>
-      <Link to='/james-webb' className='flex items-center justify-center gap-4'>
+      <Link to='/' className='flex items-center justify-center gap-4'>
         <img
           className='h-12'
           src='https://res.cloudinary.com/omar45/image/upload/v1664565392/why-webb/LOGO.png'
@@ -16,8 +16,8 @@ const Footer = () => {
         Open-source web application to discover James Webb's potentials
       </p>
       <ul className='flex flex-wrap gap-4 justify-center items-center text-gray-200 dark:text-white'>
-        <Link to={'/telescopes'}>Telescopes</Link>-
-        <Link to={'/james-webb'}>James Webb</Link>-
+        {/* <Link to={'/telescopes'}>Telescopes</Link>- */}
+        {/* <Link to={'/'}>James Webb</Link>- */}
         <Link to={'/game'}>Game</Link>-<Link to={'/about-us'}>About Us</Link>
       </ul>
       <span className='text-sm text-gray-500 sm:text-center dark:text-gray-400'>
