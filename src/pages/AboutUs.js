@@ -56,9 +56,8 @@ const Member = ({ info }) => {
       className={`flex-col md:flex-row gap-8 justify-center text-center items-center ${defaultPageStyle}`}>
       <div className='md:px-2' />
       <img alt={mName} className='w-56 object-cover' src={img} />
-      <div className='w-full max-w-5xl mx-auto flex flex-col justify-center items-center'>
+      <div className='max-w-sm w-full flex flex-col justify-center items-center'>
         <h2 className='mb-4 text-2xl font-bold'>{mName}</h2>
-        <p className='text-lg mb-4 text-gray-300'>Contacts</p>
         <div className='flex gap-8 justify-center md:justify-start'>
           <a href={links.linkedin} target='_blank' rel='noopener noreferrer'>
             {linkedinIcon}

@@ -78,7 +78,7 @@ const ComponentPage = ({ data }) => {
     <ScrollPage key={id}>
       <div
         id={id}
-        className={`p-6 flex-col gap-4 md:gap-12 justify-center text-center md:text-left items-center ${defaultPageStyle}`}>
+        className={`p-6 flex-col gap-4 md:gap-8 justify-center text-center md:text-left items-center ${defaultPageStyle}`}>
         <Animator animation={batch(ZoomIn(10), Fade())}>
           <div
             className={
@@ -91,7 +91,7 @@ const ComponentPage = ({ data }) => {
               src='https://res.cloudinary.com/omar45/image/upload/v1664604441/why-webb/hex-lf_ijardn.png'
               alt='hex deco'
             />
-            <h1 className='mb-4 text-4xl font-bold '>{title}</h1>
+            <h1 className='mb-4 text-3xl font-bold '>{title}</h1>
             <img
               className='hidden md:block w-48 h-24 opacity-70'
               src='https://res.cloudinary.com/omar45/image/upload/v1664604441/why-webb/hex-rt_lbdeom.png'
@@ -261,10 +261,6 @@ const JamesWebb = () => {
         <ComponentPage data={pieces[3]} />
         <ComponentPage data={pieces[4]} />
         <ComponentPage data={pieces[5]} />
-        {/* <ComponentPage data={pieces[6]} /> */}
-        {/* <ComponentPage data={pieces[7]} /> */}
-        {/* <ComponentPage data={pieces[8]} /> */}
-        {/* <ComponentPage data={pieces[9]} /> */}
       </ScrollContainer>
     </main>
   );

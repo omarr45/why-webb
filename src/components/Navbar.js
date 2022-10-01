@@ -10,7 +10,7 @@ const Navbar = () => {
   ];
   let [open, setOpen] = useState(false);
   return (
-    <nav className='px-5 md:px-0 py-5 w-full max-w-4xl mx-auto flex items-center justify-between'>
+    <nav className='px-5 md:px-0 py-5 w-full max-w-5xl mx-auto flex items-center justify-between'>
       <Link to='/' className='flex items-center justify-center gap-4'>
         <img
           className='h-16'

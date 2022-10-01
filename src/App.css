@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,600;1,600&display=swap');
 
+:root {
+  font-size: 14px;
+}
+
 *,
 *::before,
 *::after {
