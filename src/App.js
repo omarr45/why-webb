@@ -1,7 +1,6 @@
 import './App.css';
 
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 
 import Footer from './components/Footer';
 import Game01 from './pages/Game01';
@@ -12,17 +11,9 @@ import Game03 from './pages/Game03';
 import Games from './pages/Games';
 import JamesWebb from './pages/JamesWebb';
 import Navbar from './components/Navbar';
-import Navbar2 from './components/Navbar2';
 import Telescopes from './pages/Telescopes';
 
 function App() {
-  const [page, setPage] = useState(null);
-
-  useEffect(() => {
-    console.log(window.location.pathname.slice(1));
-    setPage(window.location.pathname.slice(1));
-  }, []);
-
   return (
     <Router>
       <div className='App  min-h-screen text-white'>

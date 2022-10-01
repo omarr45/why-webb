@@ -73,40 +73,11 @@ const fadeInX = (x) => batch(FadeIn(), MoveIn(x, 0));
 const defaultPageStyle = 'flex w-full max-w-4xl h-full mx-auto';
 
 const ComponentPage = ({ data }) => {
-  const {
-    title,
-    description,
-    description2,
-    image,
-    id,
-    image2,
-    hot,
-    cropPosition,
-  } = data;
+  const { title, description, description2, image, id, image2, hot } = data;
   return (
     <ScrollPage key={id}>
       <div
         id={id}
-        // className={`p-6 flex-col md:flex-row gap-8 justify-center md:justify-start text-center md:text-left items-center ${defaultPageStyle}`}>
-        // <Animator animation={fadeInX(-800)}>
-        //   <img
-        //     alt={title}
-        //     className='w-72'
-        //     style={
-        //       cropPosition
-        //         ? {
-        //             objectFit: 'none',
-        //             objectPosition: `${cropPosition.x}% ${cropPosition.y}%`,
-        //           }
-        //         : { objectFit: 'cover' }
-        //     }
-        //     src={image}
-        //   />
-        // </Animator>
-        // <Animator animation={fadeInX(800)}>
-        //   <div className='w-full max-w-5xl mx-auto'>
-        //     <h1 className='mb-4 text-4xl font-bold'>{title}</h1>
-        //     <p className='text-xl'>{description}</p>
         className={`p-6 flex-col gap-4 md:gap-12 justify-center text-center md:text-left items-center ${defaultPageStyle}`}>
         <Animator animation={batch(ZoomIn(10), Fade())}>
           <div
