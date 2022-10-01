@@ -114,8 +114,12 @@ const Game01 = () => {
                 <span className='text-red-700 font-medium'>
                   Infra Red light
                 </span>
-                , which gives it the ability to see through clouds of dust and
-                gas.
+                , and having the largest mirror ever launched into space to
+                date.
+                <p className='mt-3 md:mt-1'>
+                  Which gives it the ability to see through clouds of dust and
+                  gas, and show us elements we've never seen before.
+                </p>
                 <p className='mt-3 md:mt-1'>
                   This means that JWST can see things that Hubble can't. Can you
                   tell the difference?

@@ -25,7 +25,7 @@ const Game02Lvl1 = () => {
     }
 
     if (score === 1) {
-      console.log('You Win');
+      alert('You Win');
     }
   }, [img1, img2, score]);
 
