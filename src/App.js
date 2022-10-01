@@ -2,6 +2,7 @@ import './App.css';
 
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
+import AboutUs from './pages/AboutUs';
 import Footer from './components/Footer';
 import Game01 from './pages/Game01';
 import Game02 from './pages/Game02';
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path='/' element={<JamesWebb />} />
           <Route path='/telescopes' element={<Telescopes />} />
+          <Route path='/about-us' element={<AboutUs />} />
           <Route path='/games' element={<Games />} />
           <Route path='/game-1' element={<Game01 />} />
           <Route path='/game-2' element={<Game02 />} />

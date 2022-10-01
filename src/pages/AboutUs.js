@@ -24,7 +24,8 @@ const membersInfo = [
     },
   },
 ];
-const defaultPageStyle = 'flex w-full max-w-5xl mx-auto';
+const defaultPageStyle =
+  'flex items-center justify-center w-full max-w-5xl mx-auto';
 const linkedinIcon = (
   <svg
     fill='white'
@@ -52,10 +53,10 @@ const Member = ({ info }) => {
   const { mName, img, links } = info;
   return (
     <div
-      className={`flex-col md:flex-row gap-8 justify-center md:justify-start text-center md:text-left items-center ${defaultPageStyle}`}>
+      className={`flex-col md:flex-row gap-8 justify-center text-center items-center ${defaultPageStyle}`}>
       <div className='md:px-2' />
       <img alt={mName} className='w-56 object-cover' src={img} />
-      <div className='w-full max-w-5xl mx-auto'>
+      <div className='w-full max-w-5xl mx-auto flex flex-col justify-center items-center'>
         <h2 className='mb-4 text-2xl font-bold'>{mName}</h2>
         <p className='text-lg mb-4 text-gray-300'>Contacts</p>
         <div className='flex gap-8 justify-center md:justify-start'>
@@ -73,7 +74,7 @@ const Member = ({ info }) => {
 
 const AboutUs = () => {
   return (
-    <>
+    <div className='text-center'>
       <div className={`flex-col ${defaultPageStyle}`}>
         <h1 className='my-4 text-4xl font-bold text-center md:text-left'>
           About Us
@@ -83,8 +84,7 @@ const AboutUs = () => {
           university
         </p>
       </div>
-      <h1
-        className={`my-4 text-4xl font-bold text-center md:text-left max-w-5xl mx-auto`}>
+      <h1 className={`my-4 text-4xl font-bold text-center max-w-5xl mx-auto`}>
         Team members
       </h1>
       <div className='flex flex-col gap-8'>
@@ -92,7 +92,7 @@ const AboutUs = () => {
           <Member key={i} info={memberInfo} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
