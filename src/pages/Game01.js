@@ -64,7 +64,7 @@ const Game01 = () => {
                 alt='Astro dab'
               />
               <p className='my-4'>You Scored</p>
-              <div className='flex items-center justify-center mx-auto'>
+              <div className='flex items-center justify-center gap-1 mx-auto'>
                 {questions.map((q, i) => (
                   <span key={i}>
                     <svg
@@ -73,7 +73,7 @@ const Game01 = () => {
                       height='35'
                       fill={i < score ? '#f5c400' : 'currentColor'}
                       className='bi bi-hexagon-fill'
-                      style={{transform: 'rotate(30deg)'}}
+                      style={{ transform: 'rotate(30deg)' }}
                       viewBox='0 0 16 16'>
                       <path
                         fillRule='evenodd'
