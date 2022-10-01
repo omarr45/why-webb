@@ -38,7 +38,7 @@ const pieces = [
     description2:
       "It consists of 4 main parts, Near Infrared Camera (NIRCam), Near Infrared Spectrograph (NIRSpec), Near Infrared Imager and Slitless Spectrograph (NIRISS), and Mid-Infrared Instrument (MIRI). Let's take a look at each one of them.",
     image:
-      'https://cdn.sci.esa.int/documents/34594/35357/1567216025463-JWST_ISIM_after_cryogenic_testing_2014_625.jpg',
+      'https://res.cloudinary.com/omar45/image/upload/h_700,w_1000/v1664619168/why-webb/ISIM.jpg',
     image2:
       'https://cdn.sci.esa.int/documents/34594/35357/1567217288750-isim2_fromnasa_410.jpg',
   },
@@ -55,7 +55,8 @@ const pieces = [
     title: 'Spacecraft bus',
     description:
       'Contains most of the spacecraft steering and control machinery, includlng the computer and the reaction wheels. It also conatins the thrusters that will be used to move the telescope in space.',
-    image: 'https://live.staticflickr.com/958/42277351122_fa15b471cf_b.jpg  ',
+    image:
+      'https://res.cloudinary.com/omar45/image/upload/v1664618898/why-webb/Space_craft_bus.jpg',
   },
   {
     hot: true,
@@ -155,7 +156,7 @@ const JamesWebb = () => {
           <div
             className={`max-w-4xl py-[-40px] gap-12 text-center justify-center flex-col ${defaultPageStyle}`}>
             <img
-              className='z-10 webb-image mx-auto max-w-full w-96 md:w-[600px] p-6'
+              className='z-10 webb-image mx-auto max-w-full w-96 md:w-[600px] p-6 md:p-0'
               src='https://res.cloudinary.com/omar45/image/upload/h_800,w_800/v1664539020/why-webb/jwst-landing.png'
               alt='James Webb Space Telescope'
             />
@@ -186,14 +187,13 @@ const JamesWebb = () => {
               <svg
                 className='mx-auto'
                 xmlns='http://www.w3.org/2000/svg'
-                width='62'
-                height='62'
-                viewBox='0 0 32 32'>
-                <g fill='none' fillRule='evenodd' stroke='none' strokeWidth='1'>
-                  <g fill='white' transform='translate(-414 -1089)'>
-                    <path d='M436.535 1105.88l-5.656 5.66a.962.962 0 01-.879.25.962.962 0 01-.879-.25l-5.656-5.66a1.006 1.006 0 010-1.42 1 1 0 011.414 0l4.121 4.13V1098a1.001 1.001 0 012 0v10.59l4.121-4.13a1 1 0 011.414 0c.391.4.391 1.03 0 1.42zM430 1089c-8.837 0-16 7.16-16 16s7.163 16 16 16 16-7.16 16-16-7.163-16-16-16z'></path>
-                  </g>
-                </g>
+                width='64'
+                height='64'
+                fill='none'
+                stroke='white'
+                strokeWidth='1'
+                viewBox='0 0 64 64'>
+                <path d='M48 32L32 48 16 32m32-16L32 32 16 16'></path>
               </svg>
             </Animator>
           </div>
@@ -202,7 +202,14 @@ const JamesWebb = () => {
 
         <ScrollPage>
           <div
-            className={`text-center mx-auto flex gap-8 max-w-4xl p-6 justify-center flex-col ${defaultPageStyle}`}>
+            className={`text-center mx-auto flex gap-12 max-w-4xl p-6 justify-center flex-col ${defaultPageStyle}`}>
+            <Animator animation={batch(Fade(), MoveIn(0, 800))}>
+              <img
+                className='w-36 mx-auto'
+                src='https://res.cloudinary.com/omar45/image/upload/v1664619841/why-webb/Thinking_gmcvt3.png'
+                alt='Thinking astro'
+              />
+            </Animator>
             <Animator animation={Fade()}>
               <h2 className='text-3xl'>You may be wondering,</h2>
             </Animator>
