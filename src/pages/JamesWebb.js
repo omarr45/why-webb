@@ -98,9 +98,9 @@ const ComponentPage = ({ data }) => {
     <ScrollPage>
       <div
         id={id}
-        className={`gap-8 justify-start items-center ${defaultPageStyle}`}>
+        className={`p-6 flex-col md:flex-row gap-8 justify-center md:justify-start text-center md:text-left items-center ${defaultPageStyle}`}>
         <Animator animation={fadeInX(-800)}>
-          <img className='w-72' src={image} />
+          <img alt={title} className='w-72 object-cover' src={image} />
         </Animator>
         <Animator animation={fadeInX(800)}>
           <div className='w-full max-w-5xl mx-auto'>
@@ -114,7 +114,6 @@ const ComponentPage = ({ data }) => {
 };
 
 const JamesWebb = () => {
-  const arr = [1, 2];
   return (
     <>
       <ScrollContainer>
@@ -132,7 +131,7 @@ const JamesWebb = () => {
         {/* General info page */}
         <ScrollPage>
           <div
-            className={` gap-8 text-center justify-center flex-col ${defaultPageStyle}`}>
+            className={`p-6 gap-8 text-center justify-center flex-col ${defaultPageStyle}`}>
             <Animator animation={ZoomInScrollOut}>
               <h1 className='uppercase text-5xl font-bold'>
                 The James Webb Space Telescope
