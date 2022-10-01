@@ -28,8 +28,7 @@ const pieces = [
     title: 'Secondary Mirror',
     description:
       'Reflects gathered light from the primary mirror into the science instruments.',
-    image:
-      'https://images.indianexpress.com/2022/01/5954655865_9d5b96c6f9_k.jpg',
+    image: 'https://live.staticflickr.com/6149/5954655865_4aecea8bea_c_d.jpg',
   },
   {
     title: 'Multilayer sunshield',
@@ -59,7 +58,9 @@ const pieces = [
   {
     title: 'Trim flap',
     description: 'Helps stabilize the satellite.',
-    image: '',
+    image:
+      'https://webb.nasa.gov/ImagesContent/observatory/observatory2ndTierBreakdown-1000px.jpg',
+    cropPosition: { x: 10, y: 45 },
   },
   {
     title: 'Earth-pointing antenna',
@@ -83,7 +84,11 @@ console.log('JW page: no. of pieces: ', pieces.length);
 const tooltips = [];
 pieces.forEach((piece, i) => {
   piece.id = `${piece.title.replace(' ', '-')}-${i}`;
-  tooltips.push(<a href={`#${piece.id}`}>{piece.title}</a>);
+  tooltips.push(
+    <a key={piece.id} href={`#${piece.id}`}>
+      {piece.title}
+    </a>
+  );
 });
 
 const ZoomInScrollOut = batch(FadeIn(), ZoomIn());
@@ -93,14 +98,26 @@ const fadeInX = (x) => batch(FadeIn(), MoveIn(x, 0));
 const defaultPageStyle = 'flex w-full h-full max-w-5xl mx-auto';
 
 const ComponentPage = ({ data }) => {
-  const { title, description, image, id } = data;
+  const { title, description, image, id, cropPosition } = data;
   return (
     <ScrollPage>
       <div
         id={id}
         className={`p-6 flex-col md:flex-row gap-8 justify-center md:justify-start text-center md:text-left items-center ${defaultPageStyle}`}>
         <Animator animation={fadeInX(-800)}>
-          <img alt={title} className='w-72 object-cover' src={image} />
+          <img
+            alt={title}
+            className='w-72'
+            style={
+              cropPosition
+                ? {
+                    objectFit: 'none',
+                    objectPosition: `${cropPosition.x}% ${cropPosition.y}%`,
+                  }
+                : { objectFit: 'cover' }
+            }
+            src={image}
+          />
         </Animator>
         <Animator animation={fadeInX(800)}>
           <div className='w-full max-w-5xl mx-auto'>
@@ -115,53 +132,51 @@ const ComponentPage = ({ data }) => {
 
 const JamesWebb = () => {
   return (
-    <>
-      <ScrollContainer>
-        {/* Image Page */}
-        <ScrollPage>
-          <div className={`flex justify-center w-full gap-4`}>{tooltips}</div>
-          <div className={`text-center justify-center ${defaultPageStyle}`}>
-            <img
-              className='z-10 rotate-12 webb-image'
-              src='https://res.cloudinary.com/omar45/image/upload/h_800,w_800/v1664539020/why-webb/jwst-landing.png'
-              alt='James Webb Space Telescope'
-            />
-          </div>
-        </ScrollPage>
-        {/* General info page */}
-        <ScrollPage>
-          <div
-            className={`p-6 gap-8 text-center justify-center flex-col ${defaultPageStyle}`}>
-            <Animator animation={ZoomInScrollOut}>
-              <h1 className='uppercase text-5xl font-bold'>
-                The James Webb Space Telescope
-              </h1>
-            </Animator>
-            <Animator animation={FadeUp}>
-              <p className='text-2xl'>
-                The James Webb Space Telescope (JWST) is a space telescope that
-                is planned to be launched in October 2021. It is the successor
-                to the Hubble Space Telescope and is expected to be 100 times
-                more powerful. It will be able to see further into the universe
-                than eve
-              </p>
-            </Animator>
-          </div>
-        </ScrollPage>
-        {/* each component in jwst page */}
+    <ScrollContainer>
+      {/* Image Page */}
+      <ScrollPage>
+        <div className={`flex justify-center w-full gap-4`}>{tooltips}</div>
+        <div className={`text-center justify-center ${defaultPageStyle}`}>
+          <img
+            className='z-10 rotate-12 webb-image'
+            src='https://res.cloudinary.com/omar45/image/upload/h_800,w_800/v1664539020/why-webb/jwst-landing.png'
+            alt='James Webb Space Telescope'
+          />
+        </div>
+      </ScrollPage>
+      {/* General info page */}
+      <ScrollPage>
+        <div
+          className={`p-6 gap-8 text-center justify-center flex-col ${defaultPageStyle}`}>
+          <Animator animation={ZoomInScrollOut}>
+            <h1 className='uppercase text-5xl font-bold'>
+              The James Webb Space Telescope
+            </h1>
+          </Animator>
+          <Animator animation={FadeUp}>
+            <p className='text-2xl'>
+              The James Webb Space Telescope (JWST) is a space telescope that is
+              planned to be launched in October 2021. It is the successor to the
+              Hubble Space Telescope and is expected to be 100 times more
+              powerful. It will be able to see further into the universe than
+              eve
+            </p>
+          </Animator>
+        </div>
+      </ScrollPage>
+      {/* each component in jwst page */}
 
-        <ComponentPage data={pieces[0]} />
-        <ComponentPage data={pieces[1]} />
-        <ComponentPage data={pieces[2]} />
-        <ComponentPage data={pieces[3]} />
-        <ComponentPage data={pieces[4]} />
-        <ComponentPage data={pieces[5]} />
-        <ComponentPage data={pieces[6]} />
-        <ComponentPage data={pieces[7]} />
-        <ComponentPage data={pieces[8]} />
-        {/* <ComponentPage data={pieces[9]} /> */}
-      </ScrollContainer>
-    </>
+      <ComponentPage data={pieces[0]} />
+      <ComponentPage data={pieces[1]} />
+      <ComponentPage data={pieces[2]} />
+      <ComponentPage data={pieces[3]} />
+      <ComponentPage data={pieces[4]} />
+      <ComponentPage data={pieces[5]} />
+      <ComponentPage data={pieces[6]} />
+      <ComponentPage data={pieces[7]} />
+      <ComponentPage data={pieces[8]} />
+      {/* <ComponentPage data={pieces[9]} /> */}
+    </ScrollContainer>
   );
 };
 

@@ -44,8 +44,7 @@ const Game01 = () => {
   const answerHandler = (isRight) => {
     const updatedScore = score + isRight;
     setScore(updatedScore);
-    if (currentQuestion < questions.length)
-      setCurrentQuestion(currentQuestion + 1);
+    setCurrentQuestion(currentQuestion + 1);
     setBackdrop(false);
   };
 
