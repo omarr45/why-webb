@@ -3,7 +3,7 @@
 ## WhyWebb is a web app aiming to help astro enthausiasts learn more about James Webb Space Telescope's amazing capabilities
 ### Developed for NASA Space Apps 2022 - Cairo
 
-### Check [live version](https://whywebb.space/) 
+### Check [live version](https://why-webb.web.app/) 
 
 
 ## Screenshots
